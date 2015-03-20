@@ -1,0 +1,14 @@
+
+server {
+	listen   80;
+	server_name  209.20.74.86;
+
+	location / {
+		root   /srv/www/default/public_html;
+		index  index.html index.htm;
+
+	}
+	 location ~ /\. { deny  all; }
+}
+
+
