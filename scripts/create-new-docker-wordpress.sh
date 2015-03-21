@@ -49,17 +49,4 @@ fi
 mkdir -p $wp_data_volume
 mkdir -p $mysql_data_volume
 
-docker run --name $mysql_container \
-	   --volume $mysql_data_volume:/var/lib/mysql \
-	   -e MYSQL_ROOT_PASSWORD=$mysqlpass \
-	   -d mysql
-
-# Give it a chance to spin up
-sleep 1
-
-docker run --name $wp_container \
-	   -p $wp_port:80 \
-	   --link $mysql_container:mysql \
-           --volume $wp_data_volume:/var/www/html \
-           -d migratable-wordpress
-
+`dirname $0`/create-docker-wordpress.sh
