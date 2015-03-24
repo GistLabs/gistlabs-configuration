@@ -2,16 +2,22 @@
 
 scriptname=`basename $0`
 arguments="WIKI_ROOT"
-purpose="This script is for deleting wiki deployments.  It will not affect the data volumes."
+purpose="This script is for deleting wiki deployments.  It will not remove host-bound data volumes."
+example="sudo ./$scriptname gistlabs"
 
 argcount=`wc -w <<< $arguments`
 
 if [ $# -ne $argcount ]
 then
-    echo "Arguments missing!"
-    echo "Usage: $scriptname $arguments"
+	echo
+    	echo "Arguments missing!"
+	echo    	
+	echo "USAGE: $scriptname $arguments"
 	echo 
+	echo "EXAMPLE: $example"
+	echo
 	echo $purpose
+	echo 
     exit 1
 fi
 

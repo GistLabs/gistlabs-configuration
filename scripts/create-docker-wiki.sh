@@ -3,15 +3,21 @@
 scriptname=`basename $0`
 arguments="WIKI_ROOT_NAME WIKI_PORT WIKI_EDIT_PORT DOCKER_DATA_VOLUMES_DIRECTORY"
 purpose="This script is for creating a new gollum wiki. If DOCKER_DATA_VOLUMES_DIRECTORY exists for this wiki it will be used, otherwise it will be created."
+example="sudo ./create-docker-wiki.sh gistlabs 4567 4568 /home/common/docker-data-volumes"
+
 
 argcount=`wc -w <<< $arguments`
 
 if [ $# -ne $argcount ]
 then
-    echo "Arguments missing!"
-    echo "Usage: $scriptname $arguments"
+    	echo "Arguments missing!"
+	echo
+    	echo "Usage: $scriptname $arguments"
+	echo
+	echo "EXAMPLE: $example"
 	echo 
 	echo $purpose
+	echo
     exit 1
 fi
 
