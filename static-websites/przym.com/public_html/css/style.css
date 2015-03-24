@@ -1,0 +1,312 @@
+/* Template Info
+
+Name: Soonish PSD, HTML/CSS Template
+Version: 1.0
+Author: Richard Tabor
+Author URL: http://www.purtypixels.com & http://www.purtylabs.com
+
+/*	Style Guide
+	
+	1. Resets and Clears
+	2. Body Styles
+	3. Base
+	4. Logo + Heading + Type
+	5. Progress Bar
+	6. Form Input + Spam Message
+	7. The Responsive Goods
+
+-----------------------------------------*/
+
+
+/* 1. Resets and Clears
+-----------------------------------------*/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,and,address,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,input,textarea,select{background:transparent;border:0;font-size:100%;margin:0;outline:0;padding:0;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}del{text-decoration:line-through}hr{background:transparent;border:0;clear:both;color:transparent;height:1px;margin:0;padding:0}mark{background-color:#ffffb3;font-style:italic}input,select{vertical-align:middle}ins{background-color:red;color:white;text-decoration:none}ol,ul{list-style:none}table{border-collapse:collapse;border-spacing:0} a{text-decoration:none;}
+.clear{clear:both;display:block;height:0;overflow:hidden;visibility:hidden;width:0}.clearfix:after{clear:both;content:' ';display:block;font-size:0;height:0;line-height:0;visibility:hidden;width:0}* html .clearfix,:first-child+html .clearfix{zoom:1}
+
+
+/* 2. Body Styles
+-----------------------------------------*/
+
+body {
+	font-family:Helvetica, Arial, sans-serif;
+	background:url(../images/bg.png);
+	-webkit-font-smoothing: antialiased;
+	}
+
+#wrapper {
+	width:457px;
+	margin:0 auto;
+	}
+
+
+/* 3. Base
+-----------------------------------------*/
+
+#main {
+	width:457px;
+	display:block;
+	padding-top:20px;
+	padding-bottom:13px;
+	background:url(../images/main.png) repeat-y;
+	padding-left:33px;
+	padding-right:33px; 
+	-webkit-box-sizing: border-box; 
+	   -moz-box-sizing: border-box; 
+	        box-sizing: border-box;
+	-webkit-box-shadow:0 0 7px rgba(0,0,0,.7);
+	   -moz-box-shadow:0 0 7px rgba(0,0,0,.7);
+	        box-shadow:0 0 7px rgba(0,0,0,.7);
+	}
+#bottom {
+	width:457px;
+	height:86px;
+	display:block;
+	background:url(../images/bottom.png) no-repeat;
+	}
+
+
+/* 4. Logo + Heading + Type
+-----------------------------------------*/
+.logo {
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:22px;
+	}
+
+#main h1,
+#main h2 {
+	color:#373a3f;
+	text-shadow:0 1px 0 rgba(255,255,255,.75);
+	width:100%;
+	text-align:center;
+	display:block;
+	}
+#main h1 { font-size:26px; }
+#main h2 { font-size:18px; }
+
+#main p {
+	font-size:12px;
+	color:#484c52;
+	text-shadow:0 1px 0 #fff;
+	line-height:24px;
+	width:100%;
+	text-align:center;
+	display:block;
+	margin-bottom:20px;
+	}
+
+a { color: #5a790d;
+	-webkit-transition: 0.4s linear all;
+	   -moz-transition: 0.4s linear all;
+	    -ms-transition: 0.4s linear all;
+	     -o-transition: 0.4s linear all;
+	        transition: 0.4s linear all;
+	}	
+	
+a:hover { color: #484c52; }
+	
+hr {
+	width:100%;
+	height:5px;
+	margin:20px 0;
+	display:block;
+	background:url(../images/hr.png) repeat-x;
+	border:none;
+	}
+
+
+/* 5. Progress Bar
+-----------------------------------------*/
+
+#progress {
+	width:100%;
+	display:block;
+	margin-bottom:20px;
+	position:relative;
+	}
+	
+.progress-bg {
+	height:9px;
+	background:#b7b7b7;
+	border-top:1px solid #525252;
+	border-bottom:1px solid #969696;
+	-webkit-border-radius:10px;
+	   -moz-border-radius:10px;
+	        border-radius:10px;
+	-webkit-box-shadow:
+		inset 0 1px 4px rgba(0,0,0,.58),
+		      0 1px 0px rgba(255,255,255,.6);
+	-moz-box-shadow:
+		inset 0 1px 4px rgba(0,0,0,.58),
+		      0 1px 0px rgba(255,255,255,.6);
+	box-shadow:
+		inset 0 1px 4px rgba(0,0,0,.58),
+		      0 1px 0px rgba(255,255,255,.6);
+	}
+
+.bar {
+	height:9px;
+	margin:0;
+	margin-top:-1px;
+	position:absolute;
+	background:url(../images/progress.gif) repeat-x;
+	-webkit-border-radius:10px;
+	   -moz-border-radius:10px;
+	        border-radius:10px;
+	border:1px solid #6e9217;
+	-webkit-box-shadow:
+		inset 0 1px 0 rgba(255,255,255,.35),
+		    0 1px 2px rgba(0,0,0,.2);
+	-moz-box-shadow:
+		inset 0 1px 0 rgba(255,255,255,.35),
+		    0 1px 2px rgba(0,0,0,.2);
+	box-shadow:
+		inset 0 1px 0 rgba(255,255,255,.35),
+		    0 1px 2px rgba(0,0,0,.2);
+	}
+
+.bar { 
+	width:50%;
+	-moz-animation:bar 2s ease-out;
+	-webkit-animation:bar 2s ease-out;
+	}
+
+
+@-moz-keyframes bar { 0% { width:0px;} 100%{ width:50%;} }
+
+@-webkit-keyframes bar { 0%  { width:0px;} 100%{ width:50%;} }
+
+
+/* 6. Form Input + Spam Message
+-----------------------------------------*/
+
+#main input {
+	width:100%;
+	height:42px;
+	padding-left:14px;
+	background:#fff;
+	border:1px solid #abadb1;
+	-webkit-box-shadow:inset 0 1px 3px rgba(0,0,0,.2);
+	   -moz-box-shadow:inset 0 1px 3px rgba(0,0,0,.2);
+	        box-shadow:inset 0 1px 3px rgba(0,0,0,.2);  
+	-webkit-box-sizing: border-box; 
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	-webkit-border-radius:2px;
+	   -moz-border-radius:2px;
+	        border-radius:2px;
+	font-size:14px;
+	font-weight:500;
+	color:#949aa3;
+	font-family:Helvetica, Arial, sans-serif;
+	}
+
+#main input:focus {
+	border: 1px solid #999ca2;
+	color: #717986;
+	}
+
+::-webkit-input-placeholder {
+	font-family:Helvetica, Arial, sans-serif;
+   	font-size:14px;
+	font-weight:500;
+	color:#949aa3;
+	}
+
+:-moz-placeholder {
+   	font-family:Helvetica, Arial, sans-serif;
+   	font-size:14px;
+	font-weight:500;
+	color:#949aa3;
+	}
+
+#main button {
+	width:100%;
+	height:42px;
+	background-image: -webkit-linear-gradient(top, #a9cf35, #8bbe27);
+	background-image: -moz-linear-gradient(top, #a9cf35, #8bbe27);
+	background-image: -o-linear-gradient(top, #a9cf35, #8bbe27);
+	background-image: -ms-linear-gradient(top, #a9cf35, #8bbe27);
+	background-image: linear-gradient(top, #a9cf35, #8bbe27);
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#a9cf35', EndColorStr='#8bbe27');
+	border:1px solid #6e9217;
+	-webkit-box-shadow:
+		inset 0 1px 0 rgba(255,255,255,.35),
+		    0 1px 2px rgba(0,0,0,.35);
+	-moz-box-shadow:
+		inset 0 1px 0 rgba(255,255,255,.35),
+		    0 1px 2px rgba(0,0,0,.35);
+	box-shadow:
+		inset 0 1px 0 rgba(255,255,255,.35),
+		    0 1px 2px rgba(0,0,0,.35);
+	-webkit-border-radius:2px;
+	   -moz-border-radius:2px;
+	        border-radius:2px;
+	outline:none;
+	cursor:pointer;
+	font-family:Helvetica, Arial, sans-serif;
+   	font-size:16px;
+	font-weight:600;
+	color:#3f5905;
+	text-shadow:0 1px 0 rgba(255,255,255,.19);
+	display:block;
+	margin-top:11px;
+	line-height:38px;
+	}
+	
+#main button:hover {
+	background-image: -webkit-linear-gradient(top, #b0d834, #94ca26);
+	background-image: -moz-linear-gradient(top, #b0d834, #94ca26);
+	background-image: -o-linear-gradient(top, #b0d834, #94ca26);
+	background-image: -ms-linear-gradient(top, #b0d834, #94ca26);
+	background-image: linear-gradient(top, #b0d834, #94ca26);
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#b0d834', EndColorStr='#94ca26');
+	}
+
+.spam {
+	width:100%;
+	text-align:center;
+	font-size:11px;
+	color:#36393e;
+	text-shadow:0 1px 0 #fff;
+	margin-top:25px;
+	display:block;
+	}
+
+
+/* 7. The Responsive Goods
+-----------------------------------------*/
+
+
+/*	#Mobile (Portrait) 
+================================================== */
+	
+	@media only screen and (max-width: 767px) {
+		#wrapper { width:297px; }
+		#main {
+			width:297px;
+			background-image:url(../images/main_300.png);
+			}
+
+		#bottom {
+			width:297px;
+			background-image:url(../images/bottom_300.png);
+			}
+	}	 
+	
+	
+/* #Mobile (Landscape)
+================================================== */
+
+	@media only screen and (min-width: 480px) and (max-width: 767px) {
+		#wrapper { width:401px; }
+		#main {
+			width:401px;
+			background-image:url(../images/main_400.png);
+			}
+		#bottom {
+			width:401px;
+			background-image:url(../images/bottom_400.png);
+			}
+	}

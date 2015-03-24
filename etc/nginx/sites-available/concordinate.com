@@ -9,7 +9,7 @@ server {
 	server_name  concordinate.com;
 
 	location / {
-		root   /home/common/websites/concordinate.com/public_html;
+		root   /var/www/concordinate.com/public_html;
 		index  index.html index.htm;
 
 	}
