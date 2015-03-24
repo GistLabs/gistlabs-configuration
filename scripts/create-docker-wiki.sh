@@ -28,7 +28,7 @@ mkdir -p $wiki_data_volume
 git init $wiki_data_volume
 
 #Editable
-sudo docker run --name $wiki_container -d -p $wiki_edit_port:4567 -v $wiki_data_volume:/root/wikidata gistlabs/gollum --allow-uploads
+sudo docker run --name $wiki_container -d -p $wiki_edit_port:4567 -v $wiki_data_volume:/root/wikidata gistlabs/gollum --allow-uploads page
 
 #Readonly
 sudo docker run --name $wiki_editable_container -d -p $wiki_port:4567 -v $wiki_data_volume:/root/wikidata gistlabs/gollum --no-edit
