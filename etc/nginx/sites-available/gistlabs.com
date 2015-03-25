@@ -5,7 +5,7 @@
 #}
 server {
 	listen   80;
-	server_name  dev.gistlabs.com;
+	server_name  beta.gistlabs.com;
 
 	
 	location / {
