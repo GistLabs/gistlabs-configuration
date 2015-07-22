@@ -1,11 +1,11 @@
-#server {
-#        listen 80;
-#        server_name *.gistlabs.com;
-#              rewrite ^/(.*) http://gistlabs.com/$1 redirect;
-#}
+server {
+        listen 80;
+        server_name *.gistlabs.com;
+              rewrite ^/(.*) http://gistlabs.com/$1 redirect;
+}
 server {
 	listen   80;
-	server_name  beta.gistlabs.com;
+	server_name  gistlabs.com;
 
 	
 	location / {

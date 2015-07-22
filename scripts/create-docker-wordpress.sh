@@ -35,6 +35,7 @@ mkdir -p $wp_data_volume
 mkdir -p $mysql_data_volume:
 
 docker run --name $mysql_container \
+	   --restart="always" \
 	   --volume $mysql_data_volume:/var/lib/mysql \
 	   -e MYSQL_ROOT_PASSWORD=$mysqlpass \
 	   -d mysql
@@ -43,8 +44,9 @@ docker run --name $mysql_container \
 sleep 1
 
 docker run --name $wp_container \
+	   --restart="always" \
 	   -p $wp_port:80 \
 	   --link $mysql_container:mysql \
            --volume $wp_data_volume:/var/www/html \
-           -d migratable-wordpress
+           -d gistlabs/wordpress
 
