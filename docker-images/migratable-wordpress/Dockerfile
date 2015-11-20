@@ -11,6 +11,6 @@ RUN docker-php-ext-install mysql zip
 
 RUN apt-get update && apt-get install -y php5-gd libfreetype6-dev
 
-RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/freetype
+RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/freetype --with-png-dir=/usr --with-jpeg-dir=/usr
 RUN docker-php-ext-install gd
 
