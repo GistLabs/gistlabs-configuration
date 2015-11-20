@@ -1,11 +1,6 @@
 server {
-        listen 80;
-        server_name www.gistlabs.com;
-              rewrite ^/(.*) http://gistlabs.com/$1 redirect;
-}
-server {
 	listen   80;
-	server_name  gistlabs.com;
+	server_name  stage.gistlabs.com;
 
 	
 	location / {
@@ -13,7 +8,7 @@ server {
       	 proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
 	 proxy_set_header Host $http_host;
          proxy_set_header X-NginX-Proxy true;
-         proxy_pass http://127.0.0.1:8888/;
+         proxy_pass http://127.0.0.1:8882/;
          proxy_redirect off;
   	}
 
